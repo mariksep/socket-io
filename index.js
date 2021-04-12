@@ -12,20 +12,20 @@ let connectedUsers = [];
 
 const io = socketio(server);
 io.on("connect", (socket) => {
-  console.log("a user connected", socket.id);
+  //console.log("a user connected", socket.id);
 
   socket.on("joinRoom", (room) => {
     socket.join(room);
-    console.log("joinRoom:", room);
+    // console.log("joinRoom:", room);
   });
 
   socket.on("username", (username) => {
-    console.log("username:", username);
+    //  console.log("username:", username);
     io.emit("username", username);
   });
 
   socket.on("chat message", (msg) => {
-    console.log("message: ", msg);
+    //  console.log("message: ", msg);
     io.emit("chat message", msg);
   });
   connectedUsers.push(socket.id);
@@ -35,6 +35,7 @@ io.on("connect", (socket) => {
     (socketId) => socketId !== socket.id
   );
   socket.emit("other-users", otherUsers);
+  console.log(otherUsers);
 
   // Send Offer To Start Connection
   socket.on("offer", (socketId, description) => {
