@@ -1,0 +1,30 @@
+{
+  "name": "educloud_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariksep/educloud_node.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "mari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariksep/educloud_node/issues"
+  },
+  "homepage": "https://github.com/mariksep/educloud_node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "peer": "^0.5.3",
+    "peerjs": "^1.3.1",
+    "socket.io": "^2.4.1"
+  },
+  "devDependencies": {}
+}
